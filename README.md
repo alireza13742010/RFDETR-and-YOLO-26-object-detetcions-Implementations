@@ -1,4 +1,4 @@
-
+<img width="2250" height="1500" alt="BoxR_curve" src="https://github.com/user-attachments/assets/cc427fb1-9e6a-4ab7-a924-a64dee330a4b" />
 # Object Detection with RF-DETR & YOLO26
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
@@ -83,18 +83,17 @@ AP@0.5 comes from the precision-recall curve. Precision, recall and F1 are calcu
 | **All** | **0.978** | **0.970** | **0.985** | **0.977** | **20,648** | **647** | **313** |
 
 
-
 ## Results: YOLO26
 
 ### Curves
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/127ca17c-4158-4b3c-9c1c-4828315aa7c4" width="49%" alt="Precision-Recall curve">
-  <img src="results/yolo26/BoxF1_curve.png" width="49%" alt="F1-Confidence curve">
+  <img src="https://github.com/user-attachments/assets/fb4ced43-9ff6-4928-bc24-fdd029fb1c3c" width="49%" alt="F1-Confidence curve">
 </p>
 <p align="center">
-  <img src="results/yolo26/BoxP_curve.png" width="49%" alt="Precision-Confidence curve">
-  <img src="results/yolo26/BoxR_curve.png" width="49%" alt="Recall-Confidence curve">
+  <img src="https://github.com/user-attachments/assets/c86ffb54-10a5-47ea-bcab-9f14daaee732" width="49%" alt="Precision-Confidence curve">
+  <img src="https://github.com/user-attachments/assets/7bc2303b-61af-489c-bcde-ff944f34e4cd" width="49%" alt="Recall-Confidence curve">
 </p>
 
 - **Precision-Recall:** every class stays near 1.0 precision until very high recall, giving an overall mAP@0.5 of 0.978.
