@@ -8,7 +8,6 @@
 
 Real-time detection of **9 object classes** (people, protective equipment and trays) using two modern detectors: **YOLO26** (Ultralytics) and **RF-DETR** (Roboflow). This repository contains the training setup, evaluation results and inference examples for both models.
 
-> **[Describe your use case here in one sentence, e.g. "Monitoring hygiene compliance in a food-production line."]**
 
 ---
 
@@ -83,33 +82,31 @@ AP@0.5 comes from the precision-recall curve. Precision, recall and F1 are calcu
 | unmasked | 0.980 | 0.981 | 0.988 | 0.984 | 252 | 5 | 3 |
 | **All** | **0.978** | **0.970** | **0.985** | **0.977** | **20,648** | **647** | **313** |
 
+
+
+## Results: YOLO26
+
 ### Curves
 
 <p align="center">
-  <img src="<img width="2250" height="1500" alt="BoxPR_curve" src="https://github.com/user-attachments/assets/9140fe46-7033-4d6d-a3a3-7f757eb158c6" />
-" width="49%" alt="Precision-Recall curve">
-  <img src="<img width="2250" height="1500" alt="BoxF1_curve" src="https://github.com/user-attachments/assets/b325417f-4861-4037-8674-df91acac8e0c" />
-" width="49%" alt="F1-Confidence curve">
+  <img src="https://github.com/user-attachments/assets/127ca17c-4158-4b3c-9c1c-4828315aa7c4" width="49%" alt="Precision-Recall curve">
+  <img src="results/yolo26/BoxF1_curve.png" width="49%" alt="F1-Confidence curve">
 </p>
 <p align="center">
-  <img src="<img width="2250" height="1500" alt="BoxP_curve" src="https://github.com/user-attachments/assets/617d4edc-dca3-41c2-865c-c77b92c28f73" />
-" width="49%" alt="Precision-Confidence curve">
-  <img src="<img width="2250" height="1500" alt="BoxR_curve" src="https://github.com/user-attachments/assets/88798920-eb87-45fe-83df-5ba3998de5b3" />
-" width="49%" alt="Recall-Confidence curve">
+  <img src="results/yolo26/BoxP_curve.png" width="49%" alt="Precision-Confidence curve">
+  <img src="results/yolo26/BoxR_curve.png" width="49%" alt="Recall-Confidence curve">
 </p>
 
 - **Precision-Recall:** every class stays near 1.0 precision until very high recall, giving an overall mAP@0.5 of 0.978.
-- **F1-Confidence:** the F1 score is almost flat between confidence 0.1 and 0.8, so the model is not sensitive to the exact threshold. It peaks at **0.401**, which is a good default.
+- **F1-Confidence:** the F1 score is almost flat between confidence 0.1 and 0.8, so the model is not sensitive to the exact threshold. It peaks at a confidence of **0.401**, which is a good default.
 - **Precision-Confidence:** precision rises steadily with the threshold and reaches 1.00 at the highest confidence.
 - **Recall-Confidence:** recall stays above 0.95 for most classes until about 0.7 confidence, then falls quickly.
 
 ### Confusion matrix
 
 <p align="center">
-  <img src="<img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/01739a8c-5cca-4179-95bc-5314818709e2" />
-" width="49%" alt="Confusion matrix">
-  <img src="<img width="3000" height="2250" alt="confusion_matrix_normalized" src="https://github.com/user-attachments/assets/7df9442e-7f01-4a75-b4bd-a2b65f148f9f" />
-" width="49%" alt="Normalized confusion matrix">
+  <img src="results/yolo26/confusion_matrix.png" width="49%" alt="Confusion matrix">
+  <img src="results/yolo26/confusion_matrix_normalized.png" width="49%" alt="Normalized confusion matrix">
 </p>
 
 What the matrix shows:
@@ -133,7 +130,7 @@ What the matrix shows:
 
 ## Results: RF-DETR
 
-> **[Add RF-DETR results here: PR curve, F1 curve and confusion matrix, using the same layout as the YOLO26 section.]**
+> **[Add RF-DETR results here: PR curve, F1 curve and confusion matrix, using the same layout as the YOLO26 section. Save the images in `results/rfdetr/` and link them like `<img src="results/rfdetr/BoxPR_curve.png" width="49%" alt="Precision-Recall curve">`.]**
 
 ### Model comparison
 
@@ -245,7 +242,12 @@ metrics = model.val(data="dataset/data.yaml")
 print(metrics.box.map50)          # mAP@0.5
 ```
 
-Validation produces the plots shown above (`BoxPR_curve.png`, `BoxF1_curve.png`, `confusion_matrix.png`, and others) in the run folder.
+Validation produces the plots shown above (`BoxPR_curve.png`, `BoxF1_curve.png`, `BoxP_curve.png`, `BoxR_curve.png`, `confusion_matrix.png`, `confusion_matrix_normalized.png`) in the run folder. Copy them to `results/yolo26/` so the README can display them:
+
+```bash
+mkdir -p results/yolo26
+cp runs/detect/val/{BoxPR_curve,BoxF1_curve,BoxP_curve,BoxR_curve,confusion_matrix,confusion_matrix_normalized}.png results/yolo26/
+```
 
 ---
 
@@ -278,7 +280,9 @@ detections = model.predict(Image.open("path/to/image.jpg"), threshold=0.40)
 ├── data.yaml
 ├── weights/                 # trained models
 ├── results/
-│   ├── yolo26/              # evaluation plots
+│   ├── yolo26/              # evaluation plots (BoxPR_curve.png, BoxF1_curve.png,
+│   │                        #   BoxP_curve.png, BoxR_curve.png,
+│   │                        #   confusion_matrix.png, confusion_matrix_normalized.png)
 │   └── rfdetr/
 ├── notebooks/               # training and evaluation notebooks
 └── scripts/                 # inference scripts
@@ -295,7 +299,3 @@ detections = model.predict(Image.open("path/to/image.jpg"), threshold=0.40)
 
 **[Your Name]**: Bio scientist and AI engineer
 [YouTube channel](#) · [GitHub](#) · [LinkedIn](#)
-
-## License
-
-**[Choose a license, e.g. MIT]**. Note that Ultralytics models use the AGPL-3.0 license, so check the terms before commercial use.
