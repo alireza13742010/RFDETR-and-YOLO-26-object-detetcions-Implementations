@@ -1,4 +1,3 @@
-<img width="2250" height="1500" alt="BoxR_curve" src="https://github.com/user-attachments/assets/cc427fb1-9e6a-4ab7-a924-a64dee330a4b" />
 # Object Detection with RF-DETR & YOLO26
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
