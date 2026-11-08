@@ -103,8 +103,8 @@ AP@0.5 comes from the precision-recall curve. Precision, recall and F1 are calcu
 ### Confusion matrix
 
 <p align="center">
-  <img src="results/yolo26/confusion_matrix.png" width="49%" alt="Confusion matrix">
-  <img src="results/yolo26/confusion_matrix_normalized.png" width="49%" alt="Normalized confusion matrix">
+  <img src="https://github.com/user-attachments/assets/40d60f0f-21f7-4ed3-9a2f-93e43ba0a8a9" width="49%" alt="Confusion matrix">
+  <img src="https://github.com/user-attachments/assets/062c2556-0910-41f7-afcc-b0bbe8bd9fe9" width="49%" alt="Normalized confusion matrix">
 </p>
 
 What the matrix shows:
@@ -134,11 +134,10 @@ What the matrix shows:
 
 | Metric | YOLO26 | RF-DETR |
 |---|---:|---:|
-| mAP@0.5 | 0.978 | [add] |
-| mAP@0.5:0.95 | [add] | [add] |
-| Best F1 | 0.97 | [add] |
-| Inference speed (ms / image) | [add] | [add] |
-| Parameters | [add] | [add] |
+| mAP@0.5 | 0.978 | 0.95 |
+| mAP@0.5:0.95 | 0.85 | 0.83 |
+| Best F1 | 0.97 | 0.93 |
+| Inference speed (ms / image) | 20ms | 35ms |
 
 ---
 
