@@ -1,4 +1,4 @@
-<img width="2250" height="1500" alt="BoxPR_curve" src="https://github.com/user-attachments/assets/3d1f6ccc-96f3-4abb-b08b-15a07368a1e2" /><img width="2250" height="1500" alt="BoxPR_curve" src="https://github.com/user-attachments/assets/eae4b5bf-e069-430c-87a4-7b4184bd3c97" /># RFDETR-and-YOLO-26-object-detetcions-Implementations
+
 # Object Detection with RF-DETR & YOLO26
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
