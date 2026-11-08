@@ -1,4 +1,4 @@
-# RFDETR-and-YOLO-26-object-detetcions-Implementations
+<img width="2250" height="1500" alt="BoxPR_curve" src="https://github.com/user-attachments/assets/3d1f6ccc-96f3-4abb-b08b-15a07368a1e2" /><img width="2250" height="1500" alt="BoxPR_curve" src="https://github.com/user-attachments/assets/eae4b5bf-e069-430c-87a4-7b4184bd3c97" /># RFDETR-and-YOLO-26-object-detetcions-Implementations
 # Object Detection with RF-DETR & YOLO26
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
@@ -86,12 +86,16 @@ AP@0.5 comes from the precision-recall curve. Precision, recall and F1 are calcu
 ### Curves
 
 <p align="center">
-  <img src="results/yolo26/BoxPR_curve.png" width="49%" alt="Precision-Recall curve">
-  <img src="results/yolo26/BoxF1_curve.png" width="49%" alt="F1-Confidence curve">
+  <img src="<img width="2250" height="1500" alt="BoxPR_curve" src="https://github.com/user-attachments/assets/9140fe46-7033-4d6d-a3a3-7f757eb158c6" />
+" width="49%" alt="Precision-Recall curve">
+  <img src="<img width="2250" height="1500" alt="BoxF1_curve" src="https://github.com/user-attachments/assets/b325417f-4861-4037-8674-df91acac8e0c" />
+" width="49%" alt="F1-Confidence curve">
 </p>
 <p align="center">
-  <img src="results/yolo26/BoxP_curve.png" width="49%" alt="Precision-Confidence curve">
-  <img src="results/yolo26/BoxR_curve.png" width="49%" alt="Recall-Confidence curve">
+  <img src="<img width="2250" height="1500" alt="BoxP_curve" src="https://github.com/user-attachments/assets/617d4edc-dca3-41c2-865c-c77b92c28f73" />
+" width="49%" alt="Precision-Confidence curve">
+  <img src="<img width="2250" height="1500" alt="BoxR_curve" src="https://github.com/user-attachments/assets/88798920-eb87-45fe-83df-5ba3998de5b3" />
+" width="49%" alt="Recall-Confidence curve">
 </p>
 
 - **Precision-Recall:** every class stays near 1.0 precision until very high recall, giving an overall mAP@0.5 of 0.978.
@@ -102,8 +106,10 @@ AP@0.5 comes from the precision-recall curve. Precision, recall and F1 are calcu
 ### Confusion matrix
 
 <p align="center">
-  <img src="results/yolo26/confusion_matrix.png" width="49%" alt="Confusion matrix">
-  <img src="results/yolo26/confusion_matrix_normalized.png" width="49%" alt="Normalized confusion matrix">
+  <img src="<img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/01739a8c-5cca-4179-95bc-5314818709e2" />
+" width="49%" alt="Confusion matrix">
+  <img src="<img width="3000" height="2250" alt="confusion_matrix_normalized" src="https://github.com/user-attachments/assets/7df9442e-7f01-4a75-b4bd-a2b65f148f9f" />
+" width="49%" alt="Normalized confusion matrix">
 </p>
 
 What the matrix shows:
